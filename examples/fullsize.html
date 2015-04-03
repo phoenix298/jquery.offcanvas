@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Offcanvas</title>
+	<meta charset="UTF-8" />
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="../vendor/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendor/js/jquery.transit.min.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=js"></script>
+
+	<!-- Offcanvas -->
+	<link rel="stylesheet" type="text/css" href="../src/css/jquery.offcanvas.css" />
+	<script type="text/javascript" src="../src/js/jquery.offcanvas.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../vendor/css/basics.min.css" />
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+
+	<!-- Init -->
+	<script type="text/javascript">
+		$.fx.speeds._default = 400;
+		$(document).ready(function() {		
+			$('.example').offcanvas({
+				css:	{
+					width: '80%'
+				},
+				animate: {
+					duration: 4000,
+					complete: function() {
+						console.log('animate');
+					},
+				},
+				mainCanvasAnimate: {
+					duration: 2000,
+					complete: function() {
+						console.log('mainCanvasAnimate');
+					},
+				},
+				//onShowBefore: function() {
+				//	console.log('onShowBefore');
+				//},
+				onShowAfter: function() {
+					console.log('onShowAfter');
+				},
+				//onHideBefore: function() {
+				//	console.log('onHideBefore');
+				//},
+				onHideAfter: function() {
+					console.log('onHideAfter');
+				},
+			});		
+			
+			$('.example-toggle').click(function() {
+				$('.example').offcanvas('toggle');
+			});	
+		});
+	</script>
+</head>
+<body>	
+	<section id="page">
+		This is main canvas.
+		
+		<button class="example-toggle">Toggle</button>
+		
+		<p nowrap>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+		</p>
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		<button class="example-toggle">Toggle</button>
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		A<br />A<br />
+		<button class="example-toggle">Toggle</button>
+		
+		
+		<div class="example">
+			This is off-canvas<br />	
+		<button class="example-toggle">Toggle</button>		
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+			</p>
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+			B<br />B<br />B<br />B<br />B<br />B<br />
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Offcanvas</title>
+	<meta charset="UTF-8" />
+
+	<!-- CSS libraries -->
+	<link rel="stylesheet" type="text/css" href="../vendor/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../vendor/css/basics.min.css" />
+
+	<!-- jQuery libraries -->
+	<script type="text/javascript" src="../vendor/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendor/js/jquery.transit.min.js"></script>
+
+	<!-- Offcanvas -->
+	<link rel="stylesheet" type="text/css" href="../src/css/jquery.offcanvas.css" />
+	<script type="text/javascript" src="../src/js/jquery.offcanvas.js"></script>
+
+	<!-- UI Widgets and Theme Toggle -->
+	<script type="text/javascript">
+		$(document).ready(function() {	
+		
+			$('.offcanvas').offcanvas();
+			
+			$('button.offcanvas-toggle').click(function() {
+				$('.offcanvas').offcanvas('toggle');
+			});		
+			
+		});
+	</script>
+	<style type="text/css">
+		html, body {
+			background: #fff;
+			height: 100%;
+		}
+		.offcanvas-viewport {
+			background: #efefef;
+		}
+		.offcanvas-main {
+			background: #efefef;
+			text-align: center;
+		}
+		.offcanvas-left, .offcanvas-right, .offcanvas-top, .offcanvas-bottom {
+			background: #444;
+			color: #eee;
+			text-align: center;
+		}
+		.offcanvas-main-overlay {
+			background: rgba(0, 0, 0, .5);
+		}
+		pre {
+			white-space: pre-wrap;
+		}
+		button {
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="offcanvas">
+		<nav>
+			<ul class="hmenu">
+				<li><a href="">Menu item #1</a></li>
+				<li><a href="">Menu item #2</a></li>
+				<li><a href="">Menu item #3</a></li>
+				<li><a href="">Menu item #4</a></li>
+			</ul>
+		</nav>
+	</div>	
+	<h1>This is an example off a menu, cloned in an off-canvas.</h1>
+	<h2>This is the main canvas</h2>
+	<p>
+		To make this site responsive for mobile devices, toggle the menu and the off-canvas toggle-button.<br />
+		To apply an other style of the off-canvas, use class <code>.offcanvas-element</code> as parent selector.
+	</p>
+	<button class="offcanvas-toggle">Toggle</button>
+</body>
+</html>
